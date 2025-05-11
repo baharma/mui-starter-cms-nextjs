@@ -23,23 +23,14 @@ interface Props {
 }
 
 export default function ResponsiveDrawer(props: Props) {
-  const {
-    window,
-    drawerWidth,
-    mobileOpen,
-
-    setIsClosing,
-  } = props;
-
+  const { window, drawerWidth, mobileOpen, setIsClosing } = props;
   const handleDrawerClose = () => {
     setIsClosing(true);
     props.setMobileOpen(false);
   };
-
   const handleDrawerTransitionEnd = () => {
     setIsClosing(false);
   };
-
   const drawer = (
     <div>
       <Toolbar />
@@ -71,10 +62,8 @@ export default function ResponsiveDrawer(props: Props) {
       </List>
     </div>
   );
-
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box
       component="nav"

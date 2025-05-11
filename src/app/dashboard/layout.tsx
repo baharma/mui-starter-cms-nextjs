@@ -1,7 +1,13 @@
+import LayoutLogin from "@/layout/layout-login";
+
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <LayoutLogin>{children}</LayoutLogin>
+    </>
+  );
 }
