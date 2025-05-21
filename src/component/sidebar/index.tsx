@@ -11,18 +11,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Toolbar from "@mui/material/Toolbar";
+import { PropsNavbar } from "@/interface/common/navbar";
 
-interface Props {
-  drawerWidth: number;
-  window?: () => Window;
-  mobileOpen: boolean;
-  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isClosing: boolean;
-  setIsClosing: React.Dispatch<React.SetStateAction<boolean>>;
-  handleDrawerToggle: () => void;
-}
-
-export default function ResponsiveDrawer(props: Props) {
+export default function ResponsiveDrawer(props: PropsNavbar) {
   const { window, drawerWidth, mobileOpen, setIsClosing } = props;
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -33,7 +24,7 @@ export default function ResponsiveDrawer(props: Props) {
   };
   const drawer = (
     <div>
-      <Toolbar />
+      <Toolbar>Admin Baharma</Toolbar>
       <Divider />
       <List>
         {["Dashboard", "Projects", "Tasks", "Calendar"].map((text, index) => (

@@ -1,4 +1,4 @@
-import LayoutLogin from "@/layout/layout-login";
+import DashboardLayout from "../../layout/layout-dasboard";
 
 export default async function Layout({
   children,
@@ -7,7 +7,7 @@ export default async function Layout({
 }) {
   return (
     <>
-      <LayoutLogin>{children}</LayoutLogin>
+      <DashboardLayout>{children}</DashboardLayout>
     </>
   );
 }

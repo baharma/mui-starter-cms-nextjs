@@ -16,6 +16,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import { PropsSearchBar } from "@/interface/common/search-bar";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -56,12 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-interface Props {
-  drawerWidth: number;
-  handleDrawerToggle: () => void;
-}
-
-export default function PrimarySearchAppBar(props: Props) {
+export default function PrimarySearchAppBar(props: PropsSearchBar) {
   const { drawerWidth, handleDrawerToggle } = props;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
